@@ -13,7 +13,6 @@ import android.content.Intent;
 import android.content.Context;
 import java.util.Arrays;
 import com.google.zxing.integration.android.IntentResult;
-import android.widget.Toast;
  
 public class ZxingPackage implements ReactPackage {
   private Context mContext;
@@ -50,8 +49,7 @@ public class ZxingPackage implements ReactPackage {
   }
 
   public boolean handleActivityResult(IntentResult result) {
-    Toast.makeText(mContext, "Scanned: " + result.getContents(), Toast.LENGTH_LONG).show();
-     return ZxingPackage.temp.handleActivityResult(result);
+    return ZxingPackage.temp.handleActivityResult(result);
      
 
   }
